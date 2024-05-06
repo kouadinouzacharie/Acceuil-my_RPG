@@ -41,6 +41,7 @@ typedef struct tool {
     sfText* menuItems[4];
     bool isErasing;
 } tool_t;
+void afficher_page_aide(sfRenderWindow *window, sfSprite *sprite, sfText **help_texts, int numHelpTexts);
 int MenuBar(tool_t *tool);
 void init_menu(tool_t *tool);
 void update_drawing(tool_t *ctx);
@@ -49,7 +50,6 @@ void close_window(sfRenderWindow *window);
 int handle_textures(tool_t *appel);
 void handle_window(tool_t *appel);
 void game_loop(tool_t *appel);
-void destroy_resources(tool_t *appel);
 void analyse_event(tool_t *appel);
 int window(void);
 int my_putstr(char const *str);
